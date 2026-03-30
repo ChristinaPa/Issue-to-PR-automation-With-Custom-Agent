@@ -96,6 +96,9 @@ The API starts on `http://localhost:3000`. Open `frontend/index.html` in a brows
 | `POST` | `/api/tickets` | Create and auto-route a ticket |
 | `PATCH` | `/api/tickets/:id` | Update ticket status |
 | `GET` | `/api/health` | Health check |
+| `POST` | `/api/webhooks/azuredevops` | Receive Azure DevOps Service Hook events (Bug work-item created → trigger pipeline) |
+
+See [AZURE_DEVOPS_SERVICE_HOOKS.md](./AZURE_DEVOPS_SERVICE_HOOKS.md) for the full setup guide.
 
 ### Routing Logic
 
