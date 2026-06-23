@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 const ticketRoutes = require("./routes/tickets");
+const webhookRoutes = require("./routes/webhooks");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,6 +14,7 @@ app.use(express.json({ limit: "10kb" }));
 
 // API routes
 app.use("/api/tickets", ticketRoutes);
+app.use("/api/webhooks", webhookRoutes);
 
 // Health check
 app.get("/api/health", (req, res) => {
