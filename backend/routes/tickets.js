@@ -90,4 +90,20 @@ router.patch("/:id", (req, res) => {
   res.json({ message: "Ticket updated", ticket });
 });
 
+// DELETE /api/tickets/:id — delete a ticket
+router.delete("/:id", (req, res) => {
+  const id = parseInt(req.params.id, 10);
+  if (isNaN(id)) {
+    return res.status(400).json({ error: "Invalid ticket ID" });
+  }
+
+  const index = tickets.findIndex(t => t.id === id);
+  if (index === -1) {
+    return res.status(404).json({ error: "Ticket not found" });
+  }
+
+  tickets.splice(index, 1);
+  res.status(204).send();
+});
+
 module.exports = router;

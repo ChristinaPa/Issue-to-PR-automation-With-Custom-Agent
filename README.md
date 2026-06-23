@@ -95,6 +95,7 @@ The API starts on `http://localhost:3000`. Open `frontend/index.html` in a brows
 | `GET` | `/api/tickets/:id` | Get a single ticket |
 | `POST` | `/api/tickets` | Create and auto-route a ticket |
 | `PATCH` | `/api/tickets/:id` | Update ticket status |
+| `DELETE` | `/api/tickets/:id` | Delete a ticket |
 | `GET` | `/api/health` | Health check |
 
 ### Routing Logic
